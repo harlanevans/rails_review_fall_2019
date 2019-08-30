@@ -1,0 +1,7 @@
+<h1>Index</h1>
+
+<%= link_to 'New Animal?', new_animal_path %>
+<br/>
+<% @animals.each do |a| %>
+  <%= link_to a.name, animal_path(a) %>
+<% end %>
