@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-  before_action :set_animal, only: [:show]
+  before_action :set_animal, only: [:show, :edit]
 
 
   # Hooray
@@ -26,6 +26,7 @@ class AnimalsController < ApplicationController
   end
 
   def edit
+    # Before Action
   end
 
   def update
