@@ -1,0 +1,21 @@
+<h1 class='title'> <%= @animal.id ? "Edit #{@animal.name}" : "New Animal" %></h1>
+
+<div class='form-text'>
+<%= form_for @animal do |f| %>
+
+<%= f.label :name  %>
+<%= f.text_field :name %>
+
+<%= f.label :age  %>
+<%= f.number_field :age %>
+
+
+<%= f.label :species  %>
+<%= f.text_field :species %>
+
+<%= f.submit %>
+
+<% end %>
+</div>
+
+<%= link_to 'Back', animals_path, class: 'ui black button' %>

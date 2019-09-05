@@ -1,7 +1,13 @@
-<h1>Index</h1>
-
-<%= link_to 'New Animal?', new_animal_path %>
+<h1 class="title">Welcome To Henry's Zoo </h1>
+  <div class='center-text'>
+    <%= link_to 'New Animal?', new_animal_path, class: 'ui black button' %>
+  </div>
 <br/>
-<% @animals.each do |a| %>
-  <%= link_to a.name, animal_path(a) %>
-<% end %>
+<div class='center-text'>
+    <% @animals.each do |animal| %>
+  <div class='animal-list'>
+      <%= link_to animal.name, animal_path(animal) %>
+  </div>
+    <% end %>
+</div>
+

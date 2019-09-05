@@ -1,5 +1,9 @@
-<h1>Name: <%= @animal.name %></h1>
-<h3>Age: <%= @animal.age %></h3>
-<h3>Species: <%= @animal.species %></h3>
-
-<%= link_to 'Go back to index', animals_path %>
+<h1 class='title'>Name: <%= @animal.name %></h1>
+<h3 class='title'>Age: <%= @animal.age %></h3>
+<h3 class='title'>Species: <%= @animal.species %></h3>
+<br />
+  <ul class='button-grid'>
+  <button class='crud-button'><%= link_to 'Back', animals_path %></button>
+  <button class='crud-button'><%= link_to 'Edit', edit_animal_path(@animal.id) %></button>
+  <button class='crud-button'><%= link_to 'Delete', animal_path(@animal), method: :delete %></button>
+  </ul>

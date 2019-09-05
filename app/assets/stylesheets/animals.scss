@@ -1,3 +1,59 @@
 // Place all the styles related to the animals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url("https://fonts.googleapis.com/css?family=Manjari&display=swap");
+
+.title {
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Manjari", sans-serif;
+}
+
+.background {
+  background: rgb(80, 0, 147);
+  background: linear-gradient(
+    180deg,
+    rgba(80, 0, 147, 1) 0%,
+    rgb(0, 86, 98) 100%
+  );
+}
+
+.animal-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  font-size: 1em;
+  font-family: "Manjari", sans-serif;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 1em;
+  margin: 1em;
+}
+
+.center-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.crud-button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: .5em 1em;
+  color: black;
+}
+
+.button-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-text {
+  font-family: "Manjari", sans-serif;
+  
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>ReviewRails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='background'>
+  <div class="ui container">
     <%= yield %>
+  </div>
   </body>
 </html>

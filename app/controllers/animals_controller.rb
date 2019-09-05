@@ -1,13 +1,10 @@
 class AnimalsController < ApplicationController
-  before_action :set_animal, only: [:show, :edit]
+  before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
-
-  # Hooray
   def index
     @animals = Animal.all
   end
   
-  # Hooray
   def show
     # BeforeAction here
   end
@@ -30,13 +27,20 @@ class AnimalsController < ApplicationController
   end
 
   def update
+    # BeforeAction
+    if @animal.update(animal_params)
+      redirect_to @animal
+    else
+      render :edit
+    end
   end
 
   def destroy
+    # Before Action
+    @animal.destroy
+    redirect_to animals_path
   end
   
-
-  # _________________________________
     private
 
     def set_animal
@@ -46,7 +50,5 @@ class AnimalsController < ApplicationController
     def animal_params
       params.require(:animal).permit(:name, :age, :species)
     end
-
-
-
+    
 end
